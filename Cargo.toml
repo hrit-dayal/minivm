@@ -1,0 +1,15 @@
+[package]
+name = "minivm"
+version = "0.0.1"
+edition = "2024"
+authors = ["Hrit Dayal"]
+description = "A stack-based bytecode virtual machine with assembler and disassembler"
+
+[[bin]]
+name = "minivm"
+path = "src/main.rs"
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
