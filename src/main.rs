@@ -22,6 +22,7 @@ fn usage() -> ! {
 
 fn main() {
     let args: Vec<String> = env::args().collect();
+    println!("{:?}", env::args());
 
     if args.len() < 2 {
         usage();
