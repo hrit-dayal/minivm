@@ -1,9 +1,4 @@
-mod assembler;
-mod bytecode;
-mod disassembler;
-mod errors;
-mod isa;
-mod vm;
+use minivm::{assembler, disassembler, vm};
 
 use std::env;
 use std::process;
@@ -22,7 +17,6 @@ fn usage() -> ! {
 
 fn main() {
     let args: Vec<String> = env::args().collect();
-    println!("{:?}", env::args());
 
     if args.len() < 2 {
         usage();
